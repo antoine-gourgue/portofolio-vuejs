@@ -4,9 +4,10 @@
     <NavBar/>
   </header>
   <body class="bg-gray-800">
-    <Section/>
-    <Cards/>
-    <Contact/>
+    <LandingSection />
+    <Timeline />
+  <Cards/>
+  <Contact/>
   </body>
   <main>
 
@@ -17,11 +18,11 @@
 
 <script setup lang="ts">
 import NavBar from "@/compenents/navbar/NavBar.vue";
-import Cards from "@/compenents/cards/Cards.vue";
-import Section from "@/compenents/sections/Section.vue";
-import Contact from "@/compenents/contact/Contact.vue";
+import LandingSection from "@/compenents/sections/LandingSection.vue";
 import Footer from "@/compenents/footer/Footer.vue";
-
+import Timeline from "@/compenents/timeline/Timeline.vue";
+import Contact from "@/compenents/contact/Contact.vue";
+import Cards from "@/compenents/cards/Cards.vue";
 
 /* Datas */
 const projects = [
@@ -32,5 +33,7 @@ const projects = [
     name: 'project 2'
   }
 ]
+
+
 
 </script>
