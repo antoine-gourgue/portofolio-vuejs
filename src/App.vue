@@ -1,5 +1,7 @@
 <template>
-  <h1 class="text-red-500">toto</h1>
+  <h1 class="bg-amber-500">
+    <router-view />
+  </h1>
 </template>
 
 <script lang="ts" setup>
