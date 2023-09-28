@@ -1,8 +1,7 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
+/* SCSS FILES */
+import './assets/scss/tailwind.scss'
 import App from './App.vue'
 import router from './router'
 
