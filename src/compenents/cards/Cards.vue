@@ -119,3 +119,46 @@
   </div>
   <!-- End Card Blog -->
 </template>
+
+<script type="ts">
+const projects = [
+  {
+    name: 'ChatGPT4 Discord Bot',
+    url: "https://github.com/antoine-gourgue/chatgpt4-discord-bot",
+    img: ""
+  },
+  {
+    name: 'Football Informations',
+    url: "https://github.com/antoine-gourgue/football-information-app",
+    img: ""
+  },
+  {
+    name: 'Website Plantxa',
+    url: "https://github.com/antoine-gourgue/Bts-Final-Froject-Website",
+    img: ""
+  }
+]
+
+const techno = [
+  {
+    name: 'PHP',
+    img : "https://www.php.net/images/logos/new-php-logo.svg"
+  },
+  {
+    name: 'ReactJs',
+    img : "https://www.php.net/images/logos/new-php-logo.svg"
+  },
+  {
+    name: 'Symfony',
+    img : "https://www.php.net/images/logos/new-php-logo.svg"
+  },
+  {
+    name: 'JavaScript',
+    img : "https://www.php.net/images/logos/new-php-logo.svg"
+  },
+  {
+    name: 'TypeScript',
+    img : "https://www.php.net/images/logos/new-php-logo.svg"
+  }
+]
+</script>
