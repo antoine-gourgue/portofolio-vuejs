@@ -21,14 +21,14 @@
       <form>
         <div class="grid gap-4 lg:gap-6">
           <!-- Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 ">
             <div>
-              <label for="hs-firstname-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white">First Name</label>
+              <label for="hs-firstname-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white py-2">First Name</label>
               <input type="text" name="hs-firstname-contacts-1" id="hs-firstname-contacts-1" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
             </div>
 
             <div>
-              <label for="hs-lastname-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white">Last Name</label>
+              <label for="hs-lastname-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white py-2">Last Name</label>
               <input type="text" name="hs-lastname-contacts-1" id="hs-lastname-contacts-1" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
             </div>
           </div>
@@ -37,19 +37,19 @@
           <!-- Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
             <div>
-              <label for="hs-email-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white">Email</label>
+              <label for="hs-email-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white py-2">Email</label>
               <input type="email" name="hs-email-contacts-1" id="hs-email-contacts-1" autocomplete="email" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
             </div>
 
             <div>
-              <label for="hs-phone-number-1" class="block text-sm text-gray-700 font-medium dark:text-white">Phone Number</label>
+              <label for="hs-phone-number-1" class="block text-sm text-gray-700 font-medium dark:text-white py-2">Phone Number</label>
               <input type="text" name="hs-phone-number-1" id="hs-phone-number-1" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
             </div>
           </div>
           <!-- End Grid -->
 
           <div>
-            <label for="hs-about-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white">Details</label>
+            <label for="hs-about-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white py-2">Details</label>
             <textarea id="hs-about-contacts-1" name="hs-about-contacts-1" rows="4" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"></textarea>
           </div>
         </div>
