@@ -16,7 +16,7 @@
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+              <a v-for="item in navigation" :key="item.name" @click="scrollTo(item.id)" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
             </div>
           </div>
         </div>
@@ -38,9 +38,20 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 const navigation = [
 
 
-  { name: 'About', href: '#', current: false },
-  { name: 'Experience', href: '#', current: false },
-  { name: 'Project', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
+  { name: 'About', id: "about", current: false },
+  { name: 'Studies', id:"studies",current: false },
+  { name: 'Projects', id:"projects", current: false },
+  { name: 'Contact', id:'contact',current: false },
+
+
 ]
+
+const scrollTo = (id) => {
+  const section = document.getElementById(id );
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+}
 </script>

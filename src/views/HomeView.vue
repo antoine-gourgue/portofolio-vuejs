@@ -23,17 +23,4 @@ import Footer from "@/compenents/footer/Footer.vue";
 import Timeline from "@/compenents/timeline/Timeline.vue";
 import Contact from "@/compenents/contact/Contact.vue";
 import Cards from "@/compenents/cards/Cards.vue";
-
-/* Datas */
-const projects = [
-  {
-    name: 'project 1',
-  },
-  {
-    name: 'project 2'
-  }
-]
-
-
-
 </script>

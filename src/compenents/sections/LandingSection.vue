@@ -1,10 +1,11 @@
 <template>
-  <section
+  <section id="about"
       class="overflow-hidden bg-gray-800 flex justify-center items-center h-[75vh] px-6 sm:px-8"
   >
     <div
         class="max-w-3xl text-center ltr:sm:text-left rtl:sm:text-right"
     >
+      <img class="rounded-full object-cover object-center w-72 h-72 mx-auto " src="public/images/antoine-gourgue.png" alt="Image Description">
       <h2 class="text-2xl font-bold text-white md:text-5xl text-left mb-6">
         Hi 👋 I'm Antoine Gourgue
       </h2>
@@ -15,7 +16,7 @@
         together!
       </p>
 
-      <div class="flex items-center justify-start mt-8">
+      <div class="flex items-center justify-center mt-8">
         <button
             type="button"
             class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm
@@ -38,7 +39,7 @@
 
 <script setup lang="ts">
 const scrollToBottom = () => {
-  const section = document.getElementById("timeline");
+  const section = document.getElementById("studies");
   if (section) {
     section.scrollIntoView({
       behavior: "smooth"

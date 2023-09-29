@@ -1,6 +1,6 @@
 <template>
   <!-- Card Blog -->
-  <div class="max-w-[85rem] px-6 sm:px-16 pb-40 pt-20 lg:pb-64 lg:pt-32 mx-auto bg-gray-800">
+  <div id="projects" class="max-w-[85rem] px-6 sm:px-16 pb-40 pt-20 lg:pb-64 lg:pt-32 mx-auto bg-gray-800">
     <h2 class="text-2xl xs:text-3xl sm:text-4xl font-bold text-white text-left mb-8 flex justify-center items-center px-6 sm:px-16 pb-0 pt-20 lg:pb-0 lg:pt-32 mx-auto">Projects</h2>
     <!-- Grid -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

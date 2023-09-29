@@ -9,24 +9,9 @@
         <!-- End Col -->
 
         <ul class="text-center">
-          <li class="inline-block relative pr-8 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300 dark:before:text-gray-600">
-            <a class="inline-flex gap-x-2 text-sm text-gray-300 hover:text-gray-800 dark:text-gray-500 dark:hover:text-gray-200" href="#">
-              About
-            </a>
-          </li>
-          <li class="inline-block relative pr-8 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300 dark:before:text-gray-600">
-            <a class="inline-flex gap-x-2 text-sm text-gray-300 hover:text-gray-800 dark:text-gray-500 dark:hover:text-gray-200" href="#">
-              Experience
-            </a>
-          </li>
-          <li class="inline-block relative pr-8 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300 dark:before:text-gray-600">
-            <a class="inline-flex gap-x-2 text-sm text-gray-300 hover:text-gray-800 dark:text-gray-500 dark:hover:text-gray-200" href="#">
-              Project
-            </a>
-          </li>
-          <li class="inline-block relative pr-8 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300 dark:before:text-gray-600">
-            <a class="inline-flex gap-x-2 text-sm text-gray-300 hover:text-gray-800 dark:text-gray-500 dark:hover:text-gray-200" href="#">
-              Contact
+          <li v-for="(navItem) in navigation" :key="navItem.name" class="inline-block relative pr-8 last:pr-0 last-of-type:before:hidden before:absolute before:top-1/2 before:right-3 before:-translate-y-1/2 before:content-['/'] before:text-gray-300 dark:before:text-gray-600">
+            <a @click="scrollTo(navItem.id)" class="cursor-pointer inline-flex gap-x-2 text-sm text-gray-300 hover:text-gray-800 dark:text-gray-500 dark:hover:text-gray-200">
+              {{ navItem.name }}
             </a>
           </li>
         </ul>
@@ -61,5 +46,21 @@
     </div>
   </footer>
 </template>
+
 <script setup lang="ts">
+const navigation = [
+  { name: 'About', id: "about", current: false },
+  { name: 'Studies', id: "studies", current: false },
+  { name: 'Projects', id: "projects", current: false },
+  { name: 'Contact', id: 'contact', current: false }
+]
+
+const scrollTo = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+}
 </script>
