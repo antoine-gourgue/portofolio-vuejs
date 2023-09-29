@@ -25,7 +25,7 @@
             </defs>
         </div>
         <div class="p-4 md:p-6">
-        <span class="block mb-1 text-xs font-semibold uppercase text-blue-600 dark:text-blue-500">
+        <span class="block mb-1 text-xs font-semibold uppercase text-pink-500 dark:text-pink-400">
           {{project.name}}
         </span>
           <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:hover:text-white">

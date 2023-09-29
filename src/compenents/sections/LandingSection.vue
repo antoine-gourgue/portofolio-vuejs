@@ -19,8 +19,8 @@
       <div class="flex items-center justify-center mt-8">
         <button
             type="button"
-            class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm
-          px-5 py-3 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none
+            class="text-white bg-pink-500 hover:bg-pink-700 font-medium rounded-lg text-sm
+          px-5 py-3 mr-2 mb-2 dark:pink-500 dark:hover:bg-pink-700 focus:outline-none
           w-full xs:max-w-[240px] flex items-center"
             @click="scrollToBottom">
           <span class="flex-1 flex items-center justify-center">Continue</span>
