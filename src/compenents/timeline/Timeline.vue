@@ -23,12 +23,12 @@
         >
           <div class="flex justify-end"
             v-if="school.status !=='Finished' ">
-            <span class="inline-flex items-end gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-400 text-white">{{school.status}}</span>
+            <span class="inline-flex items-end gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-yellow-600 text-white">{{school.status}}</span>
 
           </div>
           <div class="flex justify-end"
               v-else>
-            <span class="inline-flex items-end gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-green-400 text-white">{{school.status}}</span>
+            <span class="inline-flex items-end gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-green-600 text-white">{{school.status}}</span>
           </div>
 
 

@@ -19,14 +19,21 @@
       <div class="flex items-center justify-center mt-8">
         <button
             type="button"
-            class="text-white bg-pink-500 hover:bg-pink-700 font-medium rounded-lg text-sm
-          px-5 py-3 mr-2 mb-2 dark:pink-500 dark:hover:bg-pink-700 focus:outline-none
-          w-full xs:max-w-[240px] flex items-center"
+            class="text-white bg-pink-500 hover:bg-pink-700 font-medium rounded-lg text-sm px-5 py-3 mr-2 mb-2 dark:pink-500 dark:hover:bg-pink-700 focus:outline-none w-full xs:max-w-[240px] flex items-center"
             @click="scrollToBottom">
           <span class="flex-1 flex items-center justify-center">Continue</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-               class="feather feather-chevron-down">
+          <svg
+              :style="bouncingAnimation"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-chevron-down">
             <polyline points="6 9 12 15 18 9"/>
           </svg>
         </button>
@@ -38,6 +45,31 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue';
+
+const bounceArrowAnimationName = ref(`bounceArrow-${Date.now()}`);
+const keyframes = `
+  @keyframes ${bounceArrowAnimationName.value} {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+`;
+const styleEl = document.createElement('style');
+styleEl.innerHTML = keyframes;
+document.head.appendChild(styleEl);
+
+const bouncingAnimation = computed(() => ({
+  animation: 'bounceArrow 2s infinite',
+  animationName: bounceArrowAnimationName.value
+}));
+
 const scrollToBottom = () => {
   const section = document.getElementById("studies");
   if (section) {
