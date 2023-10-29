@@ -67,7 +67,12 @@ const projects = [
     name: 'Website Plantxa',
     url: "https://github.com/antoine-gourgue/Bts-Final-Froject-Website",
     imageUrl: "/images/Website-Plantxa.png"
-  }
+  },
+  {
+  name: 'JobBoard',
+    url: "https://github.com/antoine-gourgue/JobBoard",
+    imageUrl: "/images/Jobboard.png"
+}
 ]
 
 const techno = [
