@@ -18,18 +18,18 @@
         Fill in the form
       </h2>
 
-      <form>
-        <div class="grid gap-4 lg:gap-6">
+      <form @submit.prevent="sendInquiry">
+      <div class="grid gap-4 lg:gap-6">
           <!-- Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 ">
             <div>
               <label for="hs-firstname-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white py-2">First Name</label>
-              <input type="text" name="hs-firstname-contacts-1" id="hs-firstname-contacts-1" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
+              <input v-model="formData['hs-firstname-contacts-1']" type="text" name="hs-firstname-contacts-1" id="hs-firstname-contacts-1" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
             </div>
 
             <div>
               <label for="hs-lastname-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white py-2">Last Name</label>
-              <input type="text" name="hs-lastname-contacts-1" id="hs-lastname-contacts-1" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
+              <input v-model="formData['hs-lastname-contacts-1']" type="text" name="hs-lastname-contacts-1" id="hs-lastname-contacts-1" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
             </div>
           </div>
           <!-- End Grid -->
@@ -38,19 +38,19 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
             <div>
               <label for="hs-email-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white py-2">Email</label>
-              <input type="email" name="hs-email-contacts-1" id="hs-email-contacts-1" autocomplete="email" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
+              <input v-model="formData['hs-email-contacts-1']" type="email" name="hs-email-contacts-1" id="hs-email-contacts-1" autocomplete="email" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
             </div>
 
             <div>
               <label for="hs-phone-number-1" class="block text-sm text-gray-700 font-medium dark:text-white py-2">Phone Number</label>
-              <input type="text" name="hs-phone-number-1" id="hs-phone-number-1" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
+              <input v-model="formData['hs-phone-number-1']" type="text" name="hs-phone-number-1" id="hs-phone-number-1" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400">
             </div>
           </div>
           <!-- End Grid -->
 
           <div>
             <label for="hs-about-contacts-1" class="block text-sm text-gray-700 font-medium dark:text-white py-2">Details</label>
-            <textarea id="hs-about-contacts-1" name="hs-about-contacts-1" rows="4" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"></textarea>
+            <textarea v-model="formData['hs-about-contacts-1']" id="hs-about-contacts-1" name="hs-about-contacts-1" rows="4" class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"></textarea>
           </div>
         </div>
         <!-- End Grid -->
@@ -64,3 +64,36 @@
   </div>
 </div>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      formData: {
+        'hs-firstname-contacts-1': '',
+        'hs-lastname-contacts-1': '',
+        'hs-email-contacts-1': '',
+        'hs-phone-number-1': '',
+        'hs-about-contacts-1': ''
+      }
+
+    };
+  },
+  methods: {
+    async sendInquiry() {
+      try {
+        let response = await axios.post('http://127.0.0.1:3333/api/contact', this.formData);
+        if (response.status === 201) {
+          alert(response.data.message);
+        }
+      } catch (error) {
+        console.error("Erreur lors de l'envoi du formulaire:", error);
+        alert("Erreur lors de l'envoi du formulaire. Veuillez réessayer.");
+      }
+    }
+  }
+};
+</script>
+
