@@ -72,7 +72,12 @@ const projects = [
   name: 'JobBoard',
     url: "https://github.com/antoine-gourgue/JobBoard",
     imageUrl: "/images/Jobboard.png"
-}
+},
+  {
+    name: 'JumpGame',
+    url: "https://github.com/antoine-gourgue/JumpGame",
+    imageUrl: "/images/JumpGame.png"
+  }
 ]
 
 const techno = [

@@ -47,7 +47,7 @@ const navigation = [
   { name: 'Contact', id: 'contact', current: false }
 ]
 
-const scrollTo = (id) => {
+const scrollTo = (id: string) => {
   const section = document.getElementById(id);
   if (section) {
     section.scrollIntoView({

@@ -5,7 +5,7 @@
     <div
         class="max-w-3xl text-center ltr:sm:text-left rtl:sm:text-right"
     >
-      <img class="rounded-full object-cover object-center w-72 h-72 mx-auto " src="public/images/antoine-gourgue.png" alt="Image Description">
+      <img class="rounded-full object-cover object-center w-72 h-72 mx-auto " src="/images/antoine-gourgue.png" alt="Image Description">
       <h2 class="text-2xl font-bold text-white md:text-5xl text-left mb-6">
         Hi 👋 I'm Antoine Gourgue
       </h2>

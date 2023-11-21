@@ -12,7 +12,6 @@
         </div>
         <div class="flex flex-1 items-end justify-end sm:items-stretch">
           <div class="flex flex-1 items-start justify-start">
-            <img class="h-12 w-auto" src="public/images/logo.png" alt="IPON" />
           </div>
           <div class="hidden sm:ml-6 sm:flex items-center">
             <div class="flex justify-end space-x-4">
