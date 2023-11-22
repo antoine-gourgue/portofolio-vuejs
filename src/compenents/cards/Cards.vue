@@ -32,8 +32,11 @@
             {{project.name}}
           </h3>
           <p class="mt-3 text-gray-500">
-            A software that develops products for software developers and developments.
+            {{ project.description }}
           </p>
+          <span class="block mb-1 pt-2.5 text-s font-semibold text-gray-300 ">
+          <p> Duration : {{project.duration}}</p>
+        </span>
         </div>
         <div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-gray-700 dark:divide-gray-700">
           <a
@@ -56,27 +59,37 @@ const projects = [
   {
     name: 'ChatGPT4 Discord Bot',
     url: "https://github.com/antoine-gourgue/chatgpt4-discord-bot",
-    imageUrl: "/images/ChatGPT4-Discord-Bot.png"
+    imageUrl: "/images/ChatGPT4-Discord-Bot.png",
+    description:"Bot discord which allows to use chatgtp4 made in python.",
+    duration:"1 Day"
   },
   {
     name: 'Football Informations',
     url: "https://github.com/antoine-gourgue/football-information-app",
-    imageUrl: "/images/Football-Informations.png"
+    imageUrl: "/images/Football-Informations.png",
+    description:"React and TypeScript soccer scores and rankings site for the 5 major leagues.",
+    duration:"3 Days"
   },
   {
     name: 'Website Plantxa',
     url: "https://github.com/antoine-gourgue/Bts-Final-Froject-Website",
-    imageUrl: "/images/Website-Plantxa.png"
+    imageUrl: "/images/Website-Plantxa.png",
+    description:"Site to manage campsite plantxas made in Php and Symfony.",
+    duration:"6 Months"
   },
   {
   name: 'JobBoard',
     url: "https://github.com/antoine-gourgue/JobBoard",
-    imageUrl: "/images/Jobboard.png"
+    imageUrl: "/images/Jobboard.png",
+    description:"Site for posting job ads and applying for jobs done in Vuejs with Typescript and Adonis.",
+    duration:"2 Weeks"
 },
   {
     name: 'JumpGame',
     url: "https://github.com/antoine-gourgue/JumpGame",
-    imageUrl: "/images/JumpGame.png"
+    imageUrl: "/images/JumpGame.png",
+    description:"2D game where a character is shot at and has to dodge bullets made with Java and libGDX.",
+    duration:"1 Week"
   }
 ]
 
