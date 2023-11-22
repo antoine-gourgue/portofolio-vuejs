@@ -15,7 +15,7 @@
           </div>
           <div class="hidden sm:ml-6 sm:flex items-center">
             <div class="flex justify-end space-x-4">
-              <a v-for="item in navigation" :key="item.name" @click="scrollTo(item.id)" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white ', 'rounded-xl px-3 py-2 text-sm font-bold cursor-default']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+              <a v-for="item in navigation" :key="item.name" @click="scrollTo(item.id)" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-pink-500 hover:text-white ', 'rounded-xl px-3 py-2 text-sm font-bold cursor-default']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
             v-for="item in navigation"
             :key="item.name"
             @click="scrollTo(item.id, $event)"
-            :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium']"
+            :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-pink-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium']"
         >
           {{ item.name }}
         </button>
