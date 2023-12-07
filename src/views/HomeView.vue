@@ -6,6 +6,7 @@
   <body class="bg-gray-800">
     <LandingSection />
     <Timeline />
+    <TimelineJob/>
   <Cards/>
   <Contact/>
   </body>
@@ -23,4 +24,5 @@ import Footer from "@/compenents/footer/Footer.vue";
 import Timeline from "@/compenents/timeline/Timeline.vue";
 import Contact from "@/compenents/contact/Contact.vue";
 import Cards from "@/compenents/cards/Cards.vue";
+import TimelineJob from "@/compenents/timelineJob/TimelineJob.vue";
 </script>

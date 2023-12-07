@@ -43,6 +43,7 @@
 const navigation = [
   { name: 'About', id: "about", current: false },
   { name: 'Studies', id: "studies", current: false },
+  { name: 'Jobs', id: "jobs", current: false },
   { name: 'Projects', id: "projects", current: false },
   { name: 'Contact', id: 'contact', current: false }
 ]

@@ -2,8 +2,15 @@
   <!-- Card Blog -->
   <div id="projects" class="max-w-[85rem] px-6 sm:px-16 pb-40 pt-20 lg:pb-64 lg:pt-32 mx-auto bg-gray-800">
     <h2 class="text-2xl xs:text-3xl sm:text-4xl font-bold text-white text-left mb-8 flex justify-center items-center px-6 sm:px-16 pb-0 pt-20 lg:pb-0 lg:pt-32 mx-auto">Projects</h2>
+    <div class="mx-auto max-w-lg text-center">
+    <p class="mt-4 text-gray-300 mx-auto max-w-lg">
+      This page presents an overview of my development projects,
+      with brief descriptions and links to the code on GitHub.
+    </p>
+      </div>
     <!-- Grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class=" mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Card -->
       <div
           v-for="project in projects "
