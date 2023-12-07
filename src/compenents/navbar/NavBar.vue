@@ -21,7 +21,6 @@
         </div>
       </div>
     </div>
-
     <DisclosurePanel class="sm:hidden">
       <div class="space-y-1 px-2 pb-3 pt-2">
         <button
